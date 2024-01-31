@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="0618506375"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-01-31 10:56:20 AM"/>
+        <attribute name="created" value="MDYxODUwNjM3NTsyMjIxLTE3Ni0wMDg7MjAyNC0wMS0zMTswOTo0Nzo1MiBBTTsyMzg5"/>
+        <attribute name="edited" value="MDYxODUwNjM3NTsyMjIxLTE3Ni0wMDg7MjAyNC0wMS0zMTsxMDo1NjoyMCBBTTsxOzI0ODQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Design a modular program that asks the user to enter the monthly costs for the following expenses&#13;&#10;incurred from operating his or her automobile: loan payment, insurance, gas, oil, tires, and&#13;&#10;maintenance. The program should then display the total monthly cost of these expenses, and the total&#13;&#10;annual cost of these expenses."/>
+            <comment text="All my variables"/>
+            <declare name="totalAnnualCost" type="Integer" array="False" size=""/>
+            <declare name="totalMonthlyCost" type="Real" array="False" size=""/>
+            <declare name="loanPayment" type="Real" array="False" size=""/>
+            <declare name="insurance" type="Real" array="False" size=""/>
+            <declare name="gas" type="Real" array="False" size=""/>
+            <declare name="oil" type="Real" array="False" size=""/>
+            <declare name="tires" type="Real" array="False" size=""/>
+            <declare name="maintenance" type="Real" array="False" size=""/>
+            <output expression="&quot;Tell us your monthly cost for the loan&quot;" newline="True"/>
+            <comment text="Monthly cost for loan"/>
+            <input variable="loanPayment"/>
+            <output expression="&quot;Tell us you monthly cost for insurance&quot;" newline="True"/>
+            <comment text="Monthly cost for insurance"/>
+            <input variable="insurance"/>
+            <output expression="&quot;Tell us you monthly cost for gas&quot;" newline="True"/>
+            <comment text="Monthly cost for gas"/>
+            <input variable="gas"/>
+            <output expression="&quot;Tell us you monthly cost for oil&quot;" newline="True"/>
+            <comment text="Monthly cost for oil&#13;&#10;"/>
+            <input variable="oil"/>
+            <output expression="&quot;Tell us you monthly cost for tires&quot;" newline="True"/>
+            <comment text="Monthly costs for tires"/>
+            <input variable="tires"/>
+            <output expression="&quot;Tell us you monthly cost for maintenance&quot;" newline="True"/>
+            <comment text="Monthly cost for maintenance"/>
+            <input variable="maintenance"/>
+            <comment text="calculating total monthly cost by adding the cost of every monthly cost together"/>
+            <assign variable="totalMonthlyCost" expression="loanPayment + insurance + gas + oil + tires + maintenance"/>
+            <comment text="calculating total annual cost by multiplying the monthly cost by 12 due to 12 months in a year"/>
+            <assign variable="totalAnnualCost" expression="totalMonthlyCost * 12"/>
+            <comment text="Showing monthly cost"/>
+            <output expression="&quot;Total Monthly Cost: &quot;&amp; totalMonthlyCost" newline="True"/>
+            <comment text="showing annual cost"/>
+            <output expression="&quot;Total Annual Cost:&quot;&amp;totalAnnualCost" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
