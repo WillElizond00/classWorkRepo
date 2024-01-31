@@ -1,22 +1,23 @@
 <?xml version="1.0"?>
-<flowgorithm fileversion="2.11">
+<flowgorithm fileversion="4.0">
     <attributes>
         <attribute name="name" value=""/>
         <attribute name="authors" value="0618506375"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-01-31 01:28:59 PM"/>
+        <attribute name="saved" value="2024-01-31 04:37:01 PM"/>
         <attribute name="created" value="MDYxODUwNjM3NTsyMjIxLTE3Ni0wMDg7MjAyNC0wMS0zMTswMTowMzowNyBQTTsyMzg4"/>
         <attribute name="edited" value="MDYxODUwNjM3NTsyMjIxLTE3Ni0wMDg7MjAyNC0wMS0zMTswMToyODo1OSBQTTsxOzI1MTA="/>
+        <attribute name="edited" value="d2lsbGU7TVNJOzIwMjQtMDEtMzE7MDQ6Mzc6MDEgUE07MjsyMTU1"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <comment text="Paint Job Estimator&#13;&#10;A painting company has determined that for every 115 square feet of wall space, one gallon of paint&#13;&#10;and eight hours of labor will be required. The company charges $20.00 per hour for labor. Design a&#13;&#10;modular program that asks the user to enter the square feet of wall space to be painted and the price&#13;&#10;of the paint per gallon. The program should display the following data:&#13;&#10;The number of gallons of paint required&#13;&#10;The hours of labor required&#13;&#10;The cost of the paint&#13;&#10;The labor charges&#13;&#10;The total cost of the paint job"/>
             <declare name="gallonsOfPaint" type="Real" array="False" size=""/>
-            <declare name="hoursOfLabor" type="Real" array="False" size=""/>
+            <declare name="laborHours" type="Real" array="False" size=""/>
             <declare name="paintCost" type="Real" array="False" size=""/>
             <declare name="laborCharges" type="Real" array="False" size=""/>
-            <declare name="totalCostOfJob" type="Integer" array="False" size=""/>
+            <declare name="totalCost" type="Integer" array="False" size=""/>
             <output expression="&quot;Enter the square feet of wall space needed to be painted&quot;" newline="True"/>
             <declare name="squareFeet" type="Real" array="False" size=""/>
             <comment text="getting squarefeet"/>
@@ -25,7 +26,22 @@
             <declare name="paintPrice" type="Real" array="False" size=""/>
             <comment text="getting paint price"/>
             <input variable="paintPrice"/>
-            <assign variable="paintCost" expression="paintPrice * gallonsOfPaint"/>
+            <comment text="calculating gallons of paint"/>
+            <assign variable="gallonsOfPaint" expression="squareFeet / 115"/>
+            <comment text="getting our labor hours"/>
+            <assign variable="laborHours" expression="gallonsOfPaint * 8"/>
+            <comment text="Calculating paintCost&#13;&#10;"/>
+            <assign variable="paintCost" expression="gallonsOfPaint * paintPrice"/>
+            <comment text="calculating the labor charges ($20 per hour)"/>
+            <assign variable="laborCharges" expression="laborHours * 20.00"/>
+            <comment text="calculate the total cost of the paint job"/>
+            <assign variable="totalCost" expression="paintCost + laborCharges"/>
+            <comment text="output all the costs"/>
+            <output expression="&quot;Gallons of paint required:&quot; &amp; gallonsOfPaint" newline="True"/>
+            <output expression="&quot;Hours of labor required:&quot; &amp; laborHours" newline="True"/>
+            <output expression="&quot;Cost of the paint: $&quot; &amp; paintCost" newline="True"/>
+            <output expression="&quot;Labor charges: $&quot; &amp; laborCharges" newline="True"/>
+            <output expression="&quot;Total cost of the paint job: $&quot; &amp; totalCost" newline="True"/>
         </body>
     </function>
 </flowgorithm>

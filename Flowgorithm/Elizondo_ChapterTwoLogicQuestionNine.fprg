@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="wille"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-01-27 10:43:05 AM"/>
+        <attribute name="created" value="d2lsbGU7TVNJOzIwMjQtMDEtMjY7MDk6MzQ6MzcgUE07MjA2MQ=="/>
+        <attribute name="edited" value="d2lsbGU7TVNJOzIwMjQtMDEtMjc7MTA6NDM6MDUgQU07MzsyMTQ0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="variables"/>
+            <declare name="startingWeight" type="Real" array="False" size=""/>
+            <declare name="weightLossPerMonth" type="Real" array="False" size=""/>
+            <comment text="Computer asks for weight"/>
+            <output expression="&quot;Enter starting weight&quot;" newline="True"/>
+            <comment text="Input weight"/>
+            <input variable="startingWeight"/>
+            <comment text="Weight loss every month"/>
+            <assign variable="weightLossPerMonth" expression="4"/>
+            <declare name="monthOneWeight" type="Real" array="False" size=""/>
+            <assign variable="monthOneWeight" expression="startingWeight - weightLossPerMonth"/>
+            <comment text="Month 1 weight"/>
+            <output expression="&quot;Month One&quot;" newline="True"/>
+            <output expression="monthOneWeight" newline="True"/>
+            <declare name="monthTwoWeight" type="Real" array="False" size=""/>
+            <assign variable="monthTwoWeight" expression="monthOneWeight - weightLossPerMonth"/>
+            <comment text="Month 2 weight"/>
+            <output expression="&quot;Month Two&quot;" newline="True"/>
+            <output expression="monthTwoWeight" newline="True"/>
+            <declare name="monthThreeWeight" type="Real" array="False" size=""/>
+            <assign variable="monthThreeWeight" expression="monthTwoWeight - weightLossPerMonth"/>
+            <comment text="Month 3 weight"/>
+            <output expression="&quot;Month three&quot;" newline="True"/>
+            <output expression="monthThreeWeight" newline="True"/>
+            <declare name="monthFourWeight" type="Real" array="False" size=""/>
+            <assign variable="monthFourWeight" expression="monthThreeWeight - weightLossPerMonth"/>
+            <comment text="Month 4 weight"/>
+            <output expression="&quot;Month Four&quot;" newline="True"/>
+            <output expression="monthFourWeight" newline="True"/>
+            <declare name="monthFiveWeight" type="Real" array="False" size=""/>
+            <assign variable="monthFiveWeight" expression="monthFourWeight - weightLossPerMonth"/>
+            <comment text="Month 5 weight"/>
+            <output expression="&quot;Month Five&quot;" newline="True"/>
+            <output expression="monthFiveWeight" newline="True"/>
+            <declare name="monthSixWeight" type="Real" array="False" size=""/>
+            <assign variable="monthSixWeight" expression="monthFiveWeight - WeightLossPerMonth"/>
+            <comment text="Month 6 weight"/>
+            <output expression="&quot;Month six&quot;" newline="True"/>
+            <output expression="monthSixWeight" newline="True"/>
+            <output expression="&quot;Congrats on your weight loss!&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
