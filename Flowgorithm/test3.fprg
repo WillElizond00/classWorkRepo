@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="0618506375"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-01-26 09:56:58 AM"/>
+        <attribute name="created" value="MDYxODUwNjM3NTsyMjIxLTE3Ni0wMDg7MjAyNC0wMS0yNjswODoxOToxMiBBTTsyMzg3"/>
+        <attribute name="edited" value="MDYxODUwNjM3NTsyMjIxLTE3Ni0wMDg7MjAyNC0wMS0yNjswOTo1Njo1OCBBTTs3OzI1MTM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="acre, land" type="Integer" array="False" size=""/>
+            <assign variable="acre" expression="43560"/>
+            <output expression="&quot;What's the total number of square feet in the tract of land you want and we'll calculate the number of acres.&quot;" newline="True"/>
+            <declare name="acres" type="Integer" array="False" size=""/>
+            <input variable="land"/>
+            <assign variable="acres" expression="land / acre"/>
+            <output expression="acres" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

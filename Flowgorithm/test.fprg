@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="0618506375"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-01-26 09:31:45 AM"/>
+        <attribute name="created" value="MDYxODUwNjM3NTsyMjIxLTE3Ni0wMDg7MjAyNC0wMS0yNjswOToxNzozNiBBTTsyMzky"/>
+        <attribute name="edited" value="MDYxODUwNjM3NTsyMjIxLTE3Ni0wMDg7MjAyNC0wMS0yNjswOTozMTo0NSBBTTs1OzI1MDA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lowest, highest, average" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the lowest score&quot;" newline="True"/>
+            <input variable="lowest"/>
+            <output expression="&quot;Enter the highest score&quot;" newline="True"/>
+            <input variable="highest"/>
+            <assign variable="average" expression="lowest + highest / 2"/>
+            <output expression="&quot;The average is {average}!&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

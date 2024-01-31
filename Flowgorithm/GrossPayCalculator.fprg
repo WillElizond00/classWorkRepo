@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="0618506375"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-01-25 12:29:50 PM"/>
+        <attribute name="created" value="MDYxODUwNjM3NTsyMjIxLTE3Ni0wMDg7MjAyNC0wMS0yNTsxMDo1ODoxNyBBTTsyMzg3"/>
+        <attribute name="edited" value="MDYxODUwNjM3NTsyMjIxLTE3Ni0wMDg7MjAyNC0wMS0yNTsxMjoyOTo1MCBQTTs2OzI1MTI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Calculate the gross pay based on the number of hours &amp; rate of pay.&#13;&#10;"/>
+            <comment text="Get the number of hours worked."/>
+            <declare name="hours" type="Real" array="False" size=""/>
+            <output expression="&quot;Please enter the number of hours worked.&quot;" newline="True"/>
+            <input variable="hours"/>
+            <comment text="Get the hourly pay rate."/>
+            <declare name="payRate" type="Real" array="False" size=""/>
+            <output expression="&quot;Please enter hourly pay rate&quot;" newline="True"/>
+            <input variable="payRate"/>
+            <comment text="Calculate gross pay = hourly rate * no of hours."/>
+            <declare name="grossPay" type="Real" array="False" size=""/>
+            <assign variable="grossPay" expression="payRate * hours"/>
+            <comment text="Output gross pay&#13;&#10;"/>
+            <output expression="&quot;Your Gross Pay is : &quot; &amp; grossPay" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="0618506375"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-01-26 12:22:23 PM"/>
+        <attribute name="created" value="MDYxODUwNjM3NTsyMjIxLTE3Ni0wMDg7MjAyNC0wMS0yNjsxMDowNzoyNyBBTTsyMzgz"/>
+        <attribute name="edited" value="MDYxODUwNjM3NTsyMjIxLTE3Ni0wMDg7MjAyNC0wMS0yNjsxMjoyMjoyMyBQTTsxMjsyNTUx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="firstItem, secondItem, thirdItem, fourthItem, fifthItem" type="Integer" array="False" size=""/>
+            <declare name="salesTax" type="Integer" array="False" size=""/>
+            <declare name="subtotal" type="Integer" array="False" size=""/>
+            <declare name="total" type="Integer" array="False" size=""/>
+            <declare name="tax" type="Integer" array="False" size=""/>
+            <assign variable="salesTax" expression="0"/>
+            <assign variable="total" expression="0"/>
+            <assign variable="firstItem" expression="0"/>
+            <assign variable="secondItem" expression="0"/>
+            <assign variable="thirdItem" expression="0"/>
+            <assign variable="fourthItem" expression="0"/>
+            <assign variable="fifthItem" expression="0"/>
+            <assign variable="tax" expression="0.06"/>
+            <output expression="&quot;What's is the price for the first item?&quot;" newline="True"/>
+            <input variable="firstItem"/>
+            <output expression="&quot;What's the price of the second item&quot;" newline="True"/>
+            <input variable="secondItem"/>
+            <output expression="&quot;What's the price of the third item&quot;" newline="True"/>
+            <input variable="thirdItem"/>
+            <output expression="&quot;What's the price of the fourth item&quot;" newline="True"/>
+            <input variable="fourthItem"/>
+            <output expression="&quot;What's the price of the fifth item&quot;" newline="True"/>
+            <input variable="fifthItem"/>
+            <assign variable="subtotal" expression="firstItem + secondItem + thirdItem + fourthItem + fifthItem"/>
+            <output expression="subtotal" newline="True"/>
+            <assign variable="salesTax" expression="subtotal * tax"/>
+            <assign variable="total" expression="salesTax + subtotal"/>
+            <output expression="salesTax" newline="True"/>
+            <output expression="total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
