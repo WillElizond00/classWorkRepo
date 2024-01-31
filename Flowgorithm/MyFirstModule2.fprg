@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="0618506375"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-01-31 12:52:18 PM"/>
+        <attribute name="created" value="MDYxODUwNjM3NTsyMjIxLTE3Ni0wMDg7MjAyNC0wMS0zMTsxMToyMzoxOCBBTTsyMzc4"/>
+        <attribute name="edited" value="MDYxODUwNjM3NTsyMjIxLTE3Ni0wMDg7MjAyNC0wMS0zMTsxMjo1MjoxOCBQTTs4OzI1MTE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="firstName" type="String" array="False" size=""/>
+            <assign variable="firstName" expression="&quot;Ivan&quot;"/>
+            <output expression="&quot;I have a message for you&quot;" newline="True"/>
+            <assign variable="firstName" expression="showMessage(firstName, &quot;Jerry&quot;)"/>
+            <output expression="&quot;Good Morning &quot; &amp; firstName" newline="True"/>
+        </body>
+    </function>
+    <function name="showMessage" type="String" variable="fullName">
+        <parameters>
+            <parameter name="firstName" type="String" array="False"/>
+            <parameter name="lastName" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="fullName" type="String" array="False" size=""/>
+            <assign variable="fullName" expression="firstName &amp; &quot; &quot; &amp; lastName"/>
+        </body>
+    </function>
+</flowgorithm>
