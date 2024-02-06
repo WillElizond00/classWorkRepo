@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="0618506375"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-02-06 11:53:02 AM"/>
+        <attribute name="created" value="MDYxODUwNjM3NTsyMjIxLTE3Ni0wMDg7MjAyNC0wMi0wNjsxMTozNzoxMSBBTTsyMzc5"/>
+        <attribute name="edited" value="MDYxODUwNjM3NTsyMjIxLTE3Ni0wMDg7MjAyNC0wMi0wNjsxMTo1MzowMiBBTTsyOzI0ODY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Determine whether a customer qualifies for a loan:&#13;&#10;1 - Earn &gt;= $30,000&#13;&#10;2 - Employed at job &gt;= 2 years"/>
+            <declare name="salary, yearsOnJob" type="Real" array="False" size=""/>
+            <output expression="&quot;Please enter your Annual Salary&quot;" newline="True"/>
+            <input variable="salary"/>
+            <output expression="&quot;Please enter years on the job.&quot;" newline="True"/>
+            <input variable="yearsOnJob"/>
+            <if expression="salary &gt;= 30000">
+                <then>
+                    <if expression="yearsOnJob &gt;= 2">
+                        <then>
+                            <output expression="&quot;You are qualified for the loan! Congrats!&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
