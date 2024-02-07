@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="0618506375"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-02-07 01:45:34 PM"/>
+        <attribute name="created" value="MDYxODUwNjM3NTsyMjIxLTE3Ni0wMDg7MjAyNC0wMi0wNzswMTozOTowNyBQTTsyNDAx"/>
+        <attribute name="edited" value="MDYxODUwNjM3NTsyMjIxLTE3Ni0wMDg7MjAyNC0wMi0wNzswMTo0NTozNCBQTTsxOzI1MDY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Design a program that prompts the user to enter the name of the two primary colors to mix. If the user enters anything other than &quot;red&quot;, &quot;blue&quot;, or &quot;yellow&quot; the program should display an error message. Otherwise the program should display the name of the secondary color that results.&#13;&#10;"/>
+            <output expression="&quot;Enter your first color to mix!&quot;" newline="True"/>
+            <output expression="&quot;Enter your second color to mix!&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
