@@ -1,3 +1,7 @@
+# William ELizondo   
+# 2/8/2024
+# Chapter 4 Exercise 5
+#
 # Design a program that prompts the user to enter the name of the two primary colors to mix. If the user enters anything other than "red", "blue", or "yellow" the program should display an error message. Otherwise the program should display the name of the secondary color that results.
 # First color to mix
 print("Enter your first color to mix!")
