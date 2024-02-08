@@ -4,16 +4,57 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="0618506375"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-02-07 01:45:34 PM"/>
+        <attribute name="saved" value="2024-02-08 08:37:40 AM"/>
         <attribute name="created" value="MDYxODUwNjM3NTsyMjIxLTE3Ni0wMDg7MjAyNC0wMi0wNzswMTozOTowNyBQTTsyNDAx"/>
-        <attribute name="edited" value="MDYxODUwNjM3NTsyMjIxLTE3Ni0wMDg7MjAyNC0wMi0wNzswMTo0NTozNCBQTTsxOzI1MDY="/>
+        <attribute name="edited" value="MDYxODUwNjM3NTsyMjIxLTE3Ni0wMDg7MjAyNC0wMi0wODswODozNzo0MCBBTTszOzI0OTk="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <comment text="Design a program that prompts the user to enter the name of the two primary colors to mix. If the user enters anything other than &quot;red&quot;, &quot;blue&quot;, or &quot;yellow&quot; the program should display an error message. Otherwise the program should display the name of the secondary color that results.&#13;&#10;"/>
+            <declare name="firstColor, secondColor, mixColor" type="String" array="False" size=""/>
+            <comment text="First color to mix"/>
             <output expression="&quot;Enter your first color to mix!&quot;" newline="True"/>
+            <input variable="firstColor"/>
+            <comment text="second color to mix"/>
             <output expression="&quot;Enter your second color to mix!&quot;" newline="True"/>
+            <input variable="secondColor"/>
+            <comment text="making sure the inputs are valid before mixing colors"/>
+            <if expression="firstColor == &quot;red&quot; OR firstColor == &quot;blue&quot; OR firstColor == &quot;yellow&quot; AND secondColor == &quot;red&quot; OR secondColor == &quot;blue&quot; OR secondColor == &quot;yellow&quot;">
+                <then>
+                    <comment text="mixing colors"/>
+                    <comment text="mixing purple"/>
+                    <if expression="firstColor == &quot;red&quot; AND secondColor == &quot;blue&quot; OR firstColor == &quot;blue&quot; AND secondColor == &quot;red&quot;">
+                        <then>
+                            <assign variable="mixColor" expression="&quot;purple&quot;"/>
+                        </then>
+                        <else>
+                            <comment text="mixing orange"/>
+                            <if expression="firstColor == &quot;red&quot; AND secondColor == &quot;yellow&quot; OR secondColor == &quot;red&quot; AND firstColor == &quot;yellow&quot;">
+                                <then>
+                                    <assign variable="mixColor" expression="&quot;orange&quot;"/>
+                                </then>
+                                <else>
+                                    <comment text="mixing green"/>
+                                    <if expression="firstColor == &quot;blue&quot; AND secondColor == &quot;yellow&quot; OR firstColor == &quot;yellow&quot; AND secondColor == &quot;blue&quot;">
+                                        <then>
+                                            <assign variable="mixColor" expression="&quot;green&quot;"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;error&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                    <comment text="end result"/>
+                    <output expression="firstColor &amp; &quot; combined with &quot; &amp; secondColor &amp; &quot; equal &quot;  &amp; mixColor" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;error&quot;" newline="True"/>
+                </else>
+            </if>
         </body>
     </function>
 </flowgorithm>

@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="0618506375"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-02-08 08:34:54 AM"/>
+        <attribute name="created" value="MDYxODUwNjM3NTsyMjIxLTE3Ni0wMDg7MjAyNC0wMi0wODswODoxMjoxOSBBTTsyMzg4"/>
+        <attribute name="edited" value="MDYxODUwNjM3NTsyMjIxLTE3Ni0wMDg7MjAyNC0wMi0wODswODozNDo1NCBBTTsyOzI1MDA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="The Fast Freight Shipping Company charges the following rates:&#13;&#10;Weight of Package Rate per Pound&#13;&#10;2 pounds or less $1.10&#13;&#10;Over 2 pounds but not more than 6 pounds $2.20&#13;&#10;Over 6 pounds but not more than 10 pounds $3.70&#13;&#10;Over 10 pounds $3.80&#13;&#10;Design a program that asks the user to enter the weight of a package and then displays the shipping&#13;&#10;charges."/>
+            <declare name="packWeight" type="Real" array="False" size=""/>
+            <declare name="price" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the weight of the package&quot;" newline="True"/>
+            <input variable="packWeight"/>
+            <if expression="packWeight &lt;= 2">
+                <then>
+                    <assign variable="price" expression="1.10"/>
+                </then>
+                <else>
+                    <if expression="packWeight &lt; 6">
+                        <then>
+                            <if expression="packWeight &gt; 2">
+                                <then>
+                                    <assign variable="price" expression="2.20"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="packWeight &lt; 10">
+                                <then>
+                                    <if expression="packWeight &gt; 6">
+                                        <then>
+                                            <assign variable="price" expression="3.70"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </then>
+                                <else>
+                                    <if expression="packWeight &gt; 10">
+                                        <then>
+                                            <assign variable="price" expression="3.80"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="price" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
