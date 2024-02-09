@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="0618506375"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-02-09 01:41:54 PM"/>
+        <attribute name="created" value="MDYxODUwNjM3NTsyMjIxLTE3Ni0wMDg7MjAyNC0wMi0wOTswMTowMDo1NiBQTTsyMzk1"/>
+        <attribute name="edited" value="MDYxODUwNjM3NTsyMjIxLTE3Ni0wMDg7MjAyNC0wMi0wOTswMTo0MTo1NCBQTTsyOzI1MDc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="A software company sells a package that retails for $99. Quantity discounts are given according to&#13;&#10;the following table:&#13;&#10;Quantity Discount&#13;&#10;10&#8211;19 20%&#13;&#10;20&#8211;49 30%&#13;&#10;50&#8211;99 40%&#13;&#10;100 or more 50%&#13;&#10;Design a program that asks the user to enter the number of packages purchased. The program&#13;&#10;should then display the amount of the discount (if any) and the total amount of the purchase after the&#13;&#10;discount."/>
+            <declare name="packPrice, packsPurchased, purchase" type="Integer" array="False" size=""/>
+            <assign variable="packPrice" expression="99"/>
+            <output expression="&quot;How many packs have you purchased? Tell me!&quot;" newline="True"/>
+            <input variable="packsPurchased"/>
+            <if expression="packsPurchased &gt;= 100">
+                <then>
+                    <assign variable="purchase" expression="packsPurchased * packPrice * 0.50"/>
+                    <output expression="&quot;your purchase price is :&quot; &amp; &quot; &quot; &amp; purchase" newline="True"/>
+                </then>
+                <else>
+                    <if expression="packsPurchased &lt;= 99">
+                        <then>
+                            <if expression="packsPurchased &gt;= 50">
+                                <then>
+                                    <assign variable="purchase" expression="packsPurchased * packPrice * 0.40"/>
+                                    <output expression="&quot;your purchase price is :&quot; &amp; &quot; &quot; &amp; purchase" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="packsPurchased &lt;= 49">
+                                        <then>
+                                            <if expression="packsPurchased &gt;= 20">
+                                                <then>
+                                                    <assign variable="purchase" expression="packsPurchased * packPrice * 0.30"/>
+                                                    <output expression="&quot;your purchase price is :&quot; &amp; &quot; &quot; &amp; purchase" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="packsPurchased &lt;= 19">
+                                                        <then>
+                                                            <if expression="packsPurchased &gt;= 10">
+                                                                <then>
+                                                                    <assign variable="purchase" expression="packsPurchased * packPrice * 0.20"/>
+                                                                    <output expression="&quot;your purchase price is :&quot; &amp; &quot; &quot; &amp; purchase" newline="True"/>
+                                                                </then>
+                                                                <else/>
+                                                            </if>
+                                                        </then>
+                                                        <else/>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
