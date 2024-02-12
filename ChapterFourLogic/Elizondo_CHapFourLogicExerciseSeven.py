@@ -1,3 +1,1 @@
-
-packs = int(input("Please enter amount of packs"))
-
+print("Hello world")
