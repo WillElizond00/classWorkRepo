@@ -16,21 +16,23 @@ After all iterations, the program should display the number of months, the total
 5. output total inches of rain fall
 6. output average rainfall per month
 """
-
 years = 0
+numberOfMonths = 0
 totalRainFall = 0
-numberOfMonths = 0 
 
 years = int(input("Please enter the number of years : "))
 
 for year in range(years + 1):
-    for month in range(1, 13):
-        rainFall = float(input(f"Enter rainfall for this year {year}, month {month} : "))
+    for month in range(12):
+        rainFall = int(input(f"How many inches of rainfall for the year {year}, month {month} : "))
         numberOfMonths += 1
-        totalRainFall = totalRainFall + rainFall
+        totalRainFall += rainFall
 
-averageRainFall = totalRainFall / numberOfMonths
+    averageRainFall = totalRainFall / numberOfMonths
 
 print("Number of months:", numberOfMonths)
 print("Total rainfall:", totalRainFall, "inches")
 print("Average rainfall per month:", averageRainFall, "inches")
+
+
+
