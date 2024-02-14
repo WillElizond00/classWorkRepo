@@ -14,7 +14,6 @@ After all iterations, the program should display the number of months, the total
 3. iterate for 12 months total rainfall
 4. output number of months, 
 5. output total inches of rain fall
-6. output average rainfall per month
 """
 years = 0
 numberOfMonths = 0
@@ -22,7 +21,7 @@ totalRainFall = 0
 
 years = int(input("Please enter the number of years : "))
 
-for year in range(years + 1):
+for year in range(years):
     for month in range(12):
         rainFall = int(input(f"How many inches of rainfall for the year {year}, month {month} : "))
         numberOfMonths += 1
