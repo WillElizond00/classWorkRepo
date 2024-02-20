@@ -1,26 +1,18 @@
 # PenniesForPay.py
 # William ELizondo
 # Feb 13, 2024
-#
-#  Problem Statement
-# Write a program to calculate the amount of money a person would make
-# for a period of time, starting with 1 penny and doubling every day.
-# User Req: / Algotrithm
-# 1 - initialize variables
-noOfDays = 0
-salary = 0.0
-rate = 1
-# 2 - Prompt user for the number of days
-noOfDays = int(input("Please enter the number of days in the period : ")) 
-print("Pennies for Pay")
-print("---------------")
-print(noOfDays)
-# 3 - calculate the salary per day - Cumulative for the total number of days 
-for i in range (1, noOfDays + 1):
-    salary += (0.01 * rate) # $0.01 per day
-    rate = rate * 2 
-    print("Day -",i,"Dollars : $", round(salary), "Rate : ", rate)
-    #input("Any key to continue")
-# 4 - Output the salary for each day with the total at the end in dollars 
 
-print(round(salary))
+'''
+Design a program that calculates the amount of money a person would earn over a period of time if
+his or her salary is one penny the first day, two pennies the second day, and continues to double
+each day. The program should ask the user for the number of days. Display a table showing what the
+salary was for each day, and then show the total pay at the end of the period. The output should be
+displayed in a dollar amount, not the number of pennies
+'''
+
+days = 0
+
+days = int(input("Enter the number of days"))
+
+
+for day in range():
