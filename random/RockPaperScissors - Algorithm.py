@@ -37,3 +37,23 @@
 # 	● If both players make the same choice, 
 #	  the game must be played again to determine the winner.
 #----------------------------------------------------------
+import random 
+
+#generate a random number between 1 and 3 
+computer_choice = random.randint(1, 3)
+
+#Ask user to make a choice
+user_input = input("Choose rock, paper, or scissors: ")
+
+#convert the user choice to lower case to ensure consistency
+user_choice = user_input.lower()
+
+
+if computer_choice == 1:
+    computer_choice_text = "Rock"
+elif computer_choice == 2:
+    computer_choice_text = "Paper"
+else:
+    computer_choice_text = "scissors"
+
+    
