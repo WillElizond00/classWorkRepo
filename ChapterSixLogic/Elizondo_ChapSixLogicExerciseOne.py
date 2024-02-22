@@ -14,7 +14,7 @@
 
 
 # Designing the function for area 
-def rect (w, l):
+def rectArea (w, l):
     return w * l
 
 #Prompt the user to enter the rectangles width and length
@@ -22,5 +22,5 @@ width = int(input("Please enter a width : "))
 length = int(input("Please enter a length : "))
 
 #display the rectangles area
-area = rect(width, length)
+area = rectArea(width, length)
 print(f"The area of the rectangle is: {area}")

@@ -11,16 +11,16 @@
 
 #Design a function named max that accepts two integer values as arguments and returns the value that is the greater of the two
 
-def max_value (int1, int2):
+def max(int1, int2):
     #if int1 is bigger than int2 than return int1 as the max_value
     if int1 > int2:
         return(int1)
-    #if else than reutnr int2 as the max_value
+    #if else than return int2 as the max_value
     else:
         return(int2)
 #prompt the user to enter two integer values.
 firstInput = int(input("Input first value "))
 secondInput = int(input("Input second value "))
 #display the value that is the greater of the two
-greaterValue = max_value(firstInput, secondInput)
+greaterValue = max(firstInput, secondInput)
 print("The greater value is: ", greaterValue)
