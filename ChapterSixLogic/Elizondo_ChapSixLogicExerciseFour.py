@@ -12,10 +12,10 @@
 #Design a function named max that accepts two integer values as arguments and returns the value that is the greater of the two
 
 def max(int1, int2):
-    #if int1 is bigger than int2 than return int1 as the max_value
+    #if int1 is bigger than int2 than return int1 as the max
     if int1 > int2:
         return(int1)
-    #if else than return int2 as the max_value
+    #if else than return int2 as the max
     else:
         return(int2)
 #prompt the user to enter two integer values.
