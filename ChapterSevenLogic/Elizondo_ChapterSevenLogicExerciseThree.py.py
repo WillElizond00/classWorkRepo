@@ -38,10 +38,10 @@ while calories < 0:
 while calories < fatGrams * 9:
     print("Calories must be greater than fat grams times 9. Please enter a valid number.")
     calories = float(input("Please enter the number of calories: "))
-
+#Calculate percentage of calories from the fat
 percentageOfCaloriesFromFat = fatGrams * 9 / calories * 100
 print(f"Percentage of calories from fat: {percentageOfCaloriesFromFat:.2f}%")
-
+# The program should display a message indicating if the food is low in fat
 if percentageOfCaloriesFromFat < 30:
     print("This food is considered to be low in fat.")
 else:
