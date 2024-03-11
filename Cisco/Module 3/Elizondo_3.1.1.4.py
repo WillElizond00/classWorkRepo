@@ -1,4 +1,5 @@
-﻿n = int(input("Enter a number: "))
+﻿#prompt user for input
+n = int(input("Enter a number: "))
 # use the print() function here
 if n < 100:
     print(False)
