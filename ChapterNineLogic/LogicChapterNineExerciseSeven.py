@@ -5,5 +5,3 @@
 # The module should keep a count of the number of comparisons it makes until it finds the value. Then the program should call another module 
 # that uses the binary search algorithm to locate the same value. It should also keep a count of the number of comparisons it makes. Display these values on screen
 
-my_list = [1,2,3,4]
-print(my_list[-3:-2])
