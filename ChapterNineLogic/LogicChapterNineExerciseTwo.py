@@ -8,7 +8,7 @@ array = []
 # A while loop that stops the program when 20 names have been entered.
 while len(array) < 20:
 # Ask user to enter names 
-    user_input = input("Enter a name : ")
+    user_input = input(f" {array} Enter a name : ")
  # Append user input into the array
     array.append(user_input)
     # Check if user_input is a number which would be invalid
