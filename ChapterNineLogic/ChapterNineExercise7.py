@@ -1,4 +1,4 @@
-arrList = [10,30,20,40,60,50]
+arrList = [10,30,20,40,60,50,70,80,90,11,33,22,44,77,66,88,99,55,12,31]
 
 
 def sequentialSearch(arr, target):
@@ -22,4 +22,4 @@ def sequentialSearch(arr, target):
 
 
 
-print(sequentialSearch(arrList, 10))
+print(sequentialSearch(arrList, 55))

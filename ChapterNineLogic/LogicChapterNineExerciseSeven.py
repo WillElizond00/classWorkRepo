@@ -6,7 +6,7 @@
 # that uses the binary search algorithm to locate the same value. It should also keep a count of the number of comparisons it makes. Display these values on screen
 
 # Your array
-array = [2, 4, 3, 5, 6, 7, 1, 8, 9, 11, 12, 17, 20, 16, 13, 15, 18, 19, 14, 10]
+array = [2, 4, 3, 5, 6, 7, 1, 8, 9, 11, 12, 17, 20, 16, 13, 15, 18, 19, 14, 10, 33]
 
 #Sequential search function
 def sequential_search(array, target):
