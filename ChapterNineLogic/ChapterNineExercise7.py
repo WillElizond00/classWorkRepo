@@ -1,3 +1,14 @@
+# Chapter 9 Exercise 7
+# William Elizondo
+#
+# Design an application that has an array of at least 20 integers. It should call a module that use the 
+# sequential search algorithm to locate one the values. The module should keep a count of the 
+# number of comparisons it makes until it finds the value. Then the program should call another module
+# that uses the binary search algorithm to locate the same value. It should also keep a count of the 
+# number of comparisons it makes.Display these values on the screen. 
+
+
+
 # Define a list of integers for testing our search algorithm
 arrList = [5,6,1,3,2,4,7,8,9,0,10,12,14,13,17,15,16,18,19,20]
 
