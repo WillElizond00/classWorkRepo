@@ -38,7 +38,8 @@ def sequentialSearch(arr, target):
 
 def binary_search(arr, target):
     # Make a copy of the array and sort it for the binary search,
-    sorted_arr = arr.copy()
+    sorted_arr = []
+    sorted_arr[:]= arr[:]
     sorted_arr.sort()
     found = False
     comparisons = 0
@@ -47,7 +48,7 @@ def binary_search(arr, target):
 
     # Perform binary search 
     while not found:
-        middle_position = int((end_position - start_position) / 2) 
+        middle_position = (end_position - start_position) // 2 + start_position
         comparisons += 1 # Increment comparisons counter.
         if sorted_arr[middle_position] == target:
             found = True
@@ -71,5 +72,5 @@ def binary_search(arr, target):
 
 
 
-#print(sequentialSearch(arrList, 20))
+print(sequentialSearch(arrList, 20))
 print(binary_search(arrList, 10))
