@@ -8,7 +8,7 @@ names1 = input("Please enter a name: ")
 score1 = input("Please enter score: ")
 
 # Write to the file
-outFile.write(names1 + '/')
+outFile.write(names1 + ",")
 outFile.write(score1)
 
 #Close the outFile
