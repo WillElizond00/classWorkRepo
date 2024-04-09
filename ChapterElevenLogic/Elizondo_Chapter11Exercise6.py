@@ -60,6 +60,7 @@ def nameSearch():
             print(line.strip())
     print(outFile.read())
 
+
 # Change the phone number
 def modifyPhoneNumber():
     personSearch = input("Enter the name of the person who's number you want to change : ")
