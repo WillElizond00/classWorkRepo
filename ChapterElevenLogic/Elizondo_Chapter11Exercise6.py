@@ -10,9 +10,9 @@
 # 5. Exit a program
 
 
-
+# append mode
 outFile = open('friends.txt', 'a')
-
+# main menu
 def main():
     next = True
     while next:
@@ -31,37 +31,51 @@ def main():
             elif menuChoice == "2":
                 nameSearch()
                 break
+            elif menuChoice == "3":
+                modifyPhoneNumber()
+                break
+            elif menuChoice == "4":
+                deleteRecord()
+                break
             elif menuChoice == "5":
                 next = False
                 break
-
-
-
+            else:
+                print("Try again")
+                break
+# Add a record
 def addARecord():
-    myList = []
-    myListy = []
-    name = outFile.write(input("Enter a name : "))
-    phone = outFile.write(input("Enter phone number : ") + "\n")
-    myList.append(name)
-    myListy.append(phone)
-    print(myList)
-
-
-
-
+    outFile = open("friends.txt", "a")
+    name = input("Enter a name: ")
+    phone = input("Enter a phone number: ")
+    outFile.write(name + " " + phone + "\n")
+    outFile.close()
 
 def nameSearch():
+    search_name = input("Enter your name to search : ")
     outFile = open('friends.txt', 'r')
+    for line in outFile:
+        if search_name.lower() in line.lower():
+            print(line.strip())
     print(outFile.read())
-    #name1 = input("Enter name you're searching for : ")
     
-    line = "One"
-    while line > " ":
-        line = outFile.readline()
+def modifyPhoneNumber():
+    personSearch = input("Enter the name of the person who's number you want to change : ")
+    
 
-        line1 = line.split(" ")
-        print(line1)
+def deleteRecord():
+    personLookUp = input("Enter the name of the record you want to delete : ")
 
+    outFile = open('friends.txt', 'r')
+    lines = outFile.readlines()
+    outFile.close()
+
+    updatedLines = [line for line in lines if personLookUp.lower() not in line.lower()]
+    outFile = open('friends.txt', 'w')
+    outFile.writelines(updatedLines)
+    outFile.close()
+
+    print(f"Record for {personLookUp} has been deleted.")
 
 main()
 
