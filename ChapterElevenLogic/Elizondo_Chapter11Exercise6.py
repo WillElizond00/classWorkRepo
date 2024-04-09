@@ -51,6 +51,7 @@ def addARecord():
     outFile.write(name + " " + phone + "\n")
     outFile.close()
 
+# Search for name
 def nameSearch():
     search_name = input("Enter your name to search : ")
     outFile = open('friends.txt', 'r')
@@ -58,11 +59,12 @@ def nameSearch():
         if search_name.lower() in line.lower():
             print(line.strip())
     print(outFile.read())
-    
+
+# Change the phone number
 def modifyPhoneNumber():
     personSearch = input("Enter the name of the person who's number you want to change : ")
     
-
+# Delete the record 
 def deleteRecord():
     personLookUp = input("Enter the name of the record you want to delete : ")
 

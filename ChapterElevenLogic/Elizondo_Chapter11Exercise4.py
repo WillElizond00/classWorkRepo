@@ -11,6 +11,8 @@
 #   4. Mars
 #   5. Exit the program
 #   Enter your selection.
+
+#Main menu 
 def main():
     next = True
     while next:
@@ -21,10 +23,10 @@ def main():
         print("\t4. Mars")
         print("\t5. Exit the program")
         print("\tEnter your selection.")
-
+        #main menu choice 
         menuChoice = input("\tChoose between 1 through 5 : ")
 
-
+# Choices
         while menuChoice >= "1" or menuChoice <= "5":
             if menuChoice == "1":
                 mercury()
