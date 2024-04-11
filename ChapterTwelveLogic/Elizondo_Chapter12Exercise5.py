@@ -9,3 +9,11 @@ print("Enter a string please ")
 
 userInput = input("Enter your string here : ")
 
+char_frequency = {}
+for char in userInput:
+    if char in char_frequency:
+        char_frequency[char] += 1
+    else:
+        char_frequency[char] += 1
+
+
