@@ -1,12 +1,5 @@
-def f(x):
-    try:
-        x = x / x 
-    except:
-        print("a", end='')
-    else:
-        print("b", end='')
-    finally:
-        print("c", end='')
+str = "Yada yada yada"
 
-f(1)
-f(0)
+str.delete(4, 9)
+
+print(str)
