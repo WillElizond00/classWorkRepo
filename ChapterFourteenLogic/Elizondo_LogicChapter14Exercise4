@@ -24,3 +24,17 @@ class Employee:
     def set_number(self, number):
         self.number = number
 
+
+class ProductionWorker:
+    def __init__(self, name, number, shift_number, hourly_pay):
+        super().__init__(name, number)
+        self.shift_number = shift_number
+        self.hourly_pay = hourly_pay
+
+
+# Accessor methods
+    def get_shift_number(self):
+        return self.shift_number
+    
+    def get_hourly_pay(self):
+        return self.hourly_pay
