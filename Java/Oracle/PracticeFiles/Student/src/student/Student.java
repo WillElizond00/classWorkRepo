@@ -9,36 +9,46 @@ import java.util.Scanner;
  * @author 0618506375
  */
 public class Student {
-    private int studentId;
-    private String name;
-    private double gpa;
+    private String fName;
+    private String lName;
+    private int stuId;
+    private String stuStatus;
     
-    public final int SCHCODE = 2221;
+    // Official version
     
     //Default constructor
-    public Student(){
-        
+    public Student(String fName, String lName, int stuId, String stuStaus){
+      this.fName = fName;
+      this.lName = lName;
+      this.stuId = stuId;
+      this.stuStatus = stuStatus;
     }
     //Instance Methods 
     //Getter - Accessor
     public int getStudId(){
-    return studentId;
+    return stuId;
     }
-    public String getName(){
-    return name;
-    }    
-    public double getGpa(){
-    return gpa;
+    public String getFirstName(){
+    return fName;
+    }   
+    public String getLastName(){
+    return lName;
+    }
+    public String getStuStatus(){
+    return stuStatus;
     }
     // Setters
     public void setStudId(int sId){
-    studentId = sId;
+    stuId = sId;
     }
-    public void setName(String myName){
-    name = myName;
+    public void setFName(String myFName){
+    fName = myFName;
     }    
-    public void setGpa(double gpa){
-    this.gpa = gpa;
+    public void setLName(String myLName){
+    lName = myLName;
+    }
+    public void setStuStatus(String studStatus){
+    this.stuStatus = studStatus ;
     }
     
     

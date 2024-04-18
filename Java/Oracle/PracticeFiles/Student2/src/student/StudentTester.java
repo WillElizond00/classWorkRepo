@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package student;
-import java.util.Scanner;
 
 /**
  *
@@ -16,22 +15,16 @@ public class StudentTester {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Student class: ");
+       Student student1 = new Student();
+       Student student2 = new Student(1,"Jerry", 4.0);
+       Student student3 = new Student(2, "William", 4.0);
         
-  
-        
-        //ClassName ObjectName = new Constructor()
-        Student student1 = new Student("William","Elizondo", 12345, "Active");
-        
-       
-      
+       student1.setName("Chip");
+        System.out.println(student2);
         System.out.println(student1);
-        System.out.println(student1.getFirstName());
-        System.out.println(student1.getLastName());
-        System.out.println(student1.getStudId());
-        System.out.println(student1.getStuStatus());
+        System.out.println(student3);
+        
         
     }// End of main method
-    
     
 }//End of Class
