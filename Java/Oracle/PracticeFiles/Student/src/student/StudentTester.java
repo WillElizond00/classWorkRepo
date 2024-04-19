@@ -22,7 +22,7 @@ public class StudentTester {
         
         //ClassName ObjectName = new Constructor()
         Student student1 = new Student("William","Elizondo", 12345, "Active");
-        
+           
        
       
         System.out.println(student1);
@@ -30,6 +30,7 @@ public class StudentTester {
         System.out.println(student1.getLastName());
         System.out.println(student1.getStudId());
         System.out.println(student1.getStuStatus());
+      
         
     }// End of main method
     

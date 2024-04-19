@@ -17,7 +17,7 @@ public class Student {
     // Official version
     
     //Default constructor
-    public Student(String fName, String lName, int stuId, String stuStaus){
+    public Student(String fName, String lName, int stuId, String stuStatus){
       this.fName = fName;
       this.lName = lName;
       this.stuId = stuId;
