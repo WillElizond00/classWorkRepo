@@ -1,0 +1,108 @@
+body {
+    background-color: lightblue;
+
+}
+h1 {
+    color:red;
+    text-align:center;
+
+}
+
+.Manga-art {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    padding: 30px;
+
+
+
+}
+
+.Manga-art img {
+    max-width: 100%;
+    height:auto;
+    object-fit: contain;
+}
+
+#animepic {
+    display:block;
+    margin: 0 auto;
+    width: 200px;
+}
+
+#headertext {
+    text-indent: 2em;
+}
+
+.animeBanner {
+    border-style: dotted;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    
+    
+    max-width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.animeBanner img{
+
+    width:600px;
+    height:600px;
+}
+
+.animeBanner p {
+    color: gold;
+    text-shadow:
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+
+    font-size: 25px;
+    font-weight: bold;
+   
+    
+}
+
+.animeTitle {
+    font-weight: bold;
+    color: red;
+    text-shadow:
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    font-size: 30px;
+}
+
+#aot{
+    background-image: url('Photos/aot5.PNG') ;
+  
+
+}
+
+#naruto {
+    background-image: url('Photos/narutobackground.PNG');
+}
+
+#onePiece {
+    background-image: url('Photos/onePieceBackground.PNG');
+}
+
+#hunterXHunter {
+    background-image: url('Photos/hunterxhunter4.PNG');
+
+}
+
+#history p {
+    display: flex;
+    font-weight: bold;
+}
+
+

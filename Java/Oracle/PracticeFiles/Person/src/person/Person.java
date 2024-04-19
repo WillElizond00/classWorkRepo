@@ -14,12 +14,13 @@ public class Person {
     private String name;
     private int age;
 
-    
+    //Constructor 
     public Person(String name, int age){
     this.name = name;
     this.age = age;
     
     }
+    //Accessor
     // Get name
     public String getName(){
      return name;   
@@ -28,7 +29,7 @@ public class Person {
     public int getAge(){
         return age;
     }
-    
+    //Setter 
     public void setName(String theName){
        name = theName;
     }
