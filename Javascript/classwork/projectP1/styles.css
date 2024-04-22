@@ -1,12 +1,61 @@
 body {
-    background-color: lightblue;
+    background-image: url(Photos/Animebackground.PNG);
+   
 
 }
 h1 {
     color:red;
     text-align:center;
+    
+}    
+#headerText {
+    text-indent: 2em;
+    font-weight: bold;
+    font-size: 25px;
+    color:red;
+    text-shadow:
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 
+}   
+
+#history p {
+    display: flex;
+    font-weight: bold;
+    text-indent : 2em;
+    font-size: 20px; 
+    color: gold;
+    
 }
+
+
+.twoBlockHistory {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}    
+
+.twoBlockHistory img {
+    flex: 1 1 50%;
+    max-width: 50%;
+    height: 309px;
+    width: 504px;;
+
+}    
+
+.twoBlockHistory p {
+    flex: 1 1 50%;
+    padding: 0 20px;
+    text-shadow:
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}    
 
 .Manga-art {
     display: flex;
@@ -18,23 +67,20 @@ h1 {
 
 
 
-}
+}    
 
 .Manga-art img {
     max-width: 100%;
     height:auto;
     object-fit: contain;
-}
+}    
 
 #animepic {
     display:block;
     margin: 0 auto;
     width: 200px;
-}
+}    
 
-#headertext {
-    text-indent: 2em;
-}
 
 .animeBanner {
     border-style: dotted;
@@ -48,13 +94,13 @@ h1 {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-}
+}    
 
 .animeBanner img{
 
     width:600px;
     height:600px;
-}
+}    
 
 .animeBanner p {
     color: gold;
@@ -68,7 +114,10 @@ h1 {
     font-weight: bold;
    
     
-}
+}    
+.animeBanner li {
+    list-style: none;
+}    
 
 .animeTitle {
     font-weight: bold;
@@ -79,30 +128,25 @@ h1 {
     -1px 1px 0 #000,
     1px 1px 0 #000;
     font-size: 30px;
-}
+}    
 
 #aot{
     background-image: url('Photos/aot5.PNG') ;
   
 
-}
+}    
 
 #naruto {
     background-image: url('Photos/narutobackground.PNG');
-}
+}    
 
 #onePiece {
     background-image: url('Photos/onePieceBackground.PNG');
-}
+}    
 
 #hunterXHunter {
     background-image: url('Photos/hunterxhunter4.PNG');
 
-}
-
-#history p {
-    display: flex;
-    font-weight: bold;
-}
+}    
 
 
