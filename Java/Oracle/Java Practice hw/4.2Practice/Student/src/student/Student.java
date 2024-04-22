@@ -51,5 +51,13 @@ public class Student {
     this.stuStatus = studStatus ;
     }
     
-    
+    @Override
+    public String toString(){
+        String stuData = "\nStudent Data :\n";
+        stuData += "Student Number : " + stuId + "\n";
+        stuData += "Student Name   : " + fName + "\n";
+        stuData += "Student ID     : " + stuId + "\n";
+        stuData += "Student Status : " + stuStatus + "\n";
+        return stuData;
+    }
 }// End of class
