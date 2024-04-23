@@ -8,6 +8,15 @@ h1 {
     text-align:center;
     
 }    
+
+
+#animepic {
+    display:block;
+    margin: 0 auto;
+    width: 400px;
+}    
+
+
 #headerText {
     text-indent: 2em;
     font-weight: bold;
@@ -58,86 +67,18 @@ h1 {
 }    
 /* slideshow css start */
 
-/* General Slideshow Container */
-.slideShow {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-    overflow: hidden;
-    height: 500px; /* Adjust based on your content */
-}
-
-/* Hide the actual radio buttons */
-.slide-radio {
-    display: none;
-}
-
-/* Slides - Initially hidden */
-.mySlides {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    opacity: 0;
-    transition: opacity 1s ease;
-    background-size: cover;
-    background-position: center;
-}
-
-/* Showing slides based on radio button selection */
-.slide-radio:checked + .mySlides {
-    opacity: 1;
-}
-
-/* Navigation labels */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: auto;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    background-color: rgba(0,0,0,0.8);
-}
-
-.prev { left: 10px; }
-.next { right: 10px; }
-
-/* Dots for navigation */
-.navigation {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-}
-
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-}
-
-.dot:hover, .slide-radio:checked + .dot {
-    background-color: #717171;
-}
 
 
 /* slideshow css end */
+
 .Manga-art {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     overflow: hidden;
-    padding: 30px;
-
+    padding: 0px 10px 30px 10px;
+    gap: 10px;
 
 
 }    
@@ -146,12 +87,6 @@ h1 {
     max-width: 100%;
     height:auto;
     object-fit: contain;
-}    
-
-#animepic {
-    display:block;
-    margin: 0 auto;
-    width: 200px;
 }    
 
 
@@ -167,6 +102,7 @@ h1 {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    
 }    
 
 .animeBanner img{
@@ -185,6 +121,7 @@ h1 {
 
     font-size: 25px;
     font-weight: bold;
+    text-indent: 2em;
    
     
 }    
@@ -205,7 +142,6 @@ h1 {
 
 #aot{
     background-image: url('Photos/aot5.PNG') ;
-  
 
 }    
 
