@@ -30,6 +30,8 @@ h1 {
 
 }   
 
+
+
 #history p {
     display: flex;
     font-weight: bold;
@@ -65,36 +67,45 @@ h1 {
     -1px 1px 0 #000,
     1px 1px 0 #000;
 }    
-/* slideshow css start */
 
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: gold; /* Bootstrap blue */
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none; /* Removes underline from the link */
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    border: none; /* No border */
+    cursor: pointer; /* Mouse cursor changes to hand icon */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.button:hover {
+    background-color: red; /* Darker blue on hover */
+}
+/* slideshow css start */
 
 
 /* slideshow css end */
 
-.Manga-art {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    overflow: hidden;
-    padding: 0px 10px 30px 10px;
-    gap: 10px;
 
 
-}    
+#theList {
 
-.Manga-art img {
-    max-width: 100%;
-    height:auto;
-    object-fit: contain;
-}    
 
+
+}
 
 .animeBanner {
     border-style: dotted;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; 
     padding: 10px;
     
     
@@ -129,6 +140,24 @@ h1 {
     list-style: none;
 }    
 
+.Manga-art {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    padding: 0px 10px 30px 10px;
+    gap: 10px;
+
+
+}    
+
+.Manga-art img {
+    max-width: 100%;
+    height:auto;
+    object-fit: contain;
+}    
+
 .animeTitle {
     font-weight: bold;
     color: red;
@@ -157,5 +186,67 @@ h1 {
     background-image: url('Photos/hunterxhunter4.PNG');
 
 }    
+
+
+/* Footer */
+#siteFooter {
+    background-image: url(Photos/Lab.PNG);
+    color: gold;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    text-shadow:
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    font-size: 20px;
+
+}
+
+
+.footerContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footerSection {
+    margin: 10px;
+    padding: 10px;
+}
+
+.footerSection h3 {
+    color: red;
+    font-weight: bold;
+}
+
+.socialLinks {
+    list-style: none;
+    padding: 0;
+}
+
+.socialLink {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: #0077cc;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.socialLink:hover {
+    background-color: #0055aa;
+}
+
+@media (min-width: 768px) {
+    .footerContent {
+        flex-direction: row;
+    }
+}
 
 
