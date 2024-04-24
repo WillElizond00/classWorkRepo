@@ -6,9 +6,17 @@ body {
 h1 {
     color:red;
     text-align:center;
+    text-shadow:
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
     
 }    
 
+img {
+    position: relative;
+}
 
 #animepic {
     display:block;
@@ -90,6 +98,73 @@ h1 {
 }
 /* slideshow css start */
 
+#slideShowHeader {
+    margin: auto;
+    font-size: 60px;
+    font-family: 'Karla', sans-serif;
+    font-weight: lighter;
+
+}
+
+.slider-frame{
+    overflow: hidden;
+      height: 400px;
+      width: 1200px;
+      margin-left: 600px;
+      margin-top: 20px;
+}
+
+@keyframes slide_animation{
+    0% {left:0px;}
+    10% {left:0px;}
+    20% {left:1200px;}
+    30% {left:1200px;}
+    40% {left: 2400px;}
+    50% {left: 2400px;}
+    60% {left: 1200px;}
+    70% {left: 1200px;}
+    80% {left: 0px;}
+    90% {left: 0px;}
+    100% {left:0px;}
+}
+
+@-webkit-keyframes slide_animation{
+    0% {left:0px;}
+    10% {left:0px;}
+    20% {left:1200px;}
+    30% {left:1200px;}
+    40% {left: 2400px;}
+    50% {left: 2400px;}
+    60% {left: 1200px;}
+    70% {left: 1200px;}
+    80% {left: 0px;}
+    90% {left: 0px;}
+    100% {left:0px;}
+}
+
+.slide-images{
+    width: 3600px;
+    height: 800px;
+    margin: 0 0 0 -2400px;
+    position: relative;
+    -webkit-animation-name: slide_animation;
+    animation-name: slide_animation;
+    -webkit-animation-duration: 33s;
+    animation-duration: 33s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+
+.img-container{
+    height: 200px;
+    width: 1200px;
+    position: relative;
+    float: left;
+}
 
 /* slideshow css end */
 
@@ -122,6 +197,11 @@ h1 {
     height:600px;
 }    
 
+.animeTitle {
+    display: flex;
+    justify-content: center;
+}
+
 .animeBanner p {
     color: gold;
     text-shadow:
@@ -133,6 +213,8 @@ h1 {
     font-size: 25px;
     font-weight: bold;
     text-indent: 2em;
+    display: flex;
+    justify-content: center;
    
     
 }    
