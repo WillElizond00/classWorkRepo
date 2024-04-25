@@ -38,6 +38,19 @@ img {
 
 }   
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid;
+    text-align: center;
+    padding: auto;
+    background-color: #d1f7fa;
+}
+
+
 
 
 #history p {
@@ -170,11 +183,7 @@ img {
 
 
 
-#theList {
 
-
-
-}
 
 .animeBanner {
     border-style: dotted;
