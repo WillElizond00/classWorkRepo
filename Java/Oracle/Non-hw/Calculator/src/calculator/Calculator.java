@@ -63,7 +63,7 @@ public class Calculator {
             break;
 
         }
-         System.out.println(Double.toString(num1) + (Double.toString(num2)));
+         System.out.println(Double.toString(num1) + operation +(Double.toString(num2)));
 
     }// end of main 
     
