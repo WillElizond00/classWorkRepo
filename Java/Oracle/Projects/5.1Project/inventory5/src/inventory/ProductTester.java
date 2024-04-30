@@ -41,10 +41,10 @@ public class ProductTester {
         System.out.println("Please enter the price: ");
         tempPrice = in.nextDouble();
         
-        
+
         
       //Creating product objects using the default constructor
-      Product p1 = new Product();
+      Product p1 = new Product(tempNumber, tempName, tempQty, tempPrice);
       Product p2 = new Product();
       
       Product p3 = new Product(125, "Rice", 5, 30);

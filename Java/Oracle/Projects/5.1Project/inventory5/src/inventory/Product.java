@@ -13,14 +13,14 @@ public class Product {
     private int itemNumber;
     private String productName;
     private int unitsInStock;
-    private int priceOfEachUnit;
+    private double priceOfEachUnit;
     
     //Default constructor
     public Product(){
     
     }
     
-    public Product(int number, String name, int qty, int price){
+    public Product(int number, String name, int qty, double price){
         this.itemNumber = number;
         this.productName = name;
         this.unitsInStock = qty;
@@ -41,7 +41,7 @@ public class Product {
         return unitsInStock;
     }
     // Return price
-    public int getPrice(){
+    public double getPrice(){
         return priceOfEachUnit;
     }
     
@@ -60,7 +60,7 @@ public class Product {
         unitsInStock = newQty;
     }
     //Set price 
-    public void setPrice(int newPrice){
+    public void setPrice(double newPrice){
         priceOfEachUnit = newPrice;
     }
     
