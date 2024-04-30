@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package inventory;
+import java.util.Scanner;
 
 /**
  *
@@ -15,6 +16,32 @@ public class ProductTester {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        //Scanner Initialization
+        Scanner in = new Scanner(System.in);
+        
+        // Declare variables to store product attributes
+        int tempNumber;
+        String tempName;
+        int tempQty;
+        double tempPrice;
+        
+        //Prompt and input for item number
+        System.out.println("Please enter item number : ");
+        tempNumber = in.nextInt();
+        
+        //Prompt and input for product name
+        System.out.println("Please enter the product name: ");
+        tempName = in.next();
+        
+        //Prompt and input for quantity
+        System.out.println("Please enter the quantity: ");
+        tempQty = in.nextInt();
+        
+        //Prompt and input for price
+        System.out.println("Please enter the price: ");
+        tempPrice = in.nextDouble();
+        
+        
         
       //Creating product objects using the default constructor
       Product p1 = new Product();
