@@ -15,7 +15,8 @@ public class JF_Section62 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-    
+        
+        
         //Declare arrays 
         
         String[] myBouquet; //2 line Declaration only 
@@ -83,13 +84,13 @@ public class JF_Section62 {
         int myCols = num1[0].length;
         
         for (int x = 0; x <myRows; x++){ // Rows
-            for (int y = 0; y < myCols; y++){
+            for (int y = 0; y < myCols; y++){ //columns
                 num1[x][y] = x;
             } //end of for x
         } // end of for y
     
           for (int x = 0; x <myRows; x++){ // Rows
-            for (int y = 0; y < myCols; y++){
+            for (int y = 0; y < myCols; y++){ //columns
                System.out.println(num1[x][y]);
             } //end of for x
           
