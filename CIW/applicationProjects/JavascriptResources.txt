@@ -1,0 +1,10 @@
+Best Javascript resources online are : 
+
+Mozilla Developer Network(MDN) Web Docs : Provides comprehensive documentation on all things javascript. Touches all aspects of the language.
+
+CodeAcademy: One of the easiest to use with small lessons for complex concepts
+
+freeCodeCamp : Entirely free and has a hands on approach
+
+w3Schools : Great for straightforward tutorials and immediate results with code editor in browser
+
