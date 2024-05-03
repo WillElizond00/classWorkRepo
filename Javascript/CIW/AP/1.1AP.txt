@@ -1,0 +1,29 @@
+Application Project 1.1
+
+Determine and document which sites provide the most information, which sites are the easiet to use, and which will benefit you the most as you learn the Javascript language.
+
+1.
+Khan Academy: https://www.khanacademy.org/computing/computer-programming/programming
+-
+Offers a structured curriculum with interactive exercises and video tutorials.
+Great for beginners with no prior coding experience.
+
+2. Mozilla Developer Network (MDN)
+-
+Official JS documentation from mozilla providing in depth explanations, guides and examples.
+Good for all levels but especially if you want to focus on certain concepts
+
+3. CodeAcademy
+- 
+Super beginner friendly.
+Features a user-friendly interface with bite-sized lesson and immediate practice through coding challenges.
+
+4. Khan Academy
+-
+Offers a structured curriculum with interative exercises and video tutorials.
+Great for beginners with no prior experience.
+
+5. FreeCodeCamp
+-
+Provides project-based learning apporach with a mix of video lectures, coding challenges and interactive exercises.
+Offers Well rounded learning experience that keeps you engaged and helps you apply your knowledge to real-world projects.

@@ -1,0 +1,26 @@
+Case Study: Client-Side Stride
+
+1. What are some of the advantages of shifting some or all of a process from the server to the client? What are some disadvantages? :
+
+Advantages :
+
+Reduce server load
+More interactive user interface
+Improved performance
+
+Disadvantages : 
+
+Increased security risks
+Dependence on user system
+Less secure data 
+
+2. Even if you cannot rewrite an entire program as client-side code, it is almost always possible to shift at least some code from the server to the client.
+What are some examples of common Website functionality that can be performed faster or better on a user's computer (the client) rather than on the server?
+
+Examples: 
+
+Caching
+Real time interative features
+Animations
+Basic Calculations
+Data Manipulation
