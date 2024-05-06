@@ -14,7 +14,6 @@ public class Product {
     private String productName;
     private int unitsInStock;
     private double priceOfEachUnit;
-    private boolean active = true;
     
     //Default constructor
     public Product(){
@@ -45,9 +44,6 @@ public class Product {
     public double getPrice(){
         return priceOfEachUnit;
     }
-    public boolean isActive(){
-        return active;
-    }
     
     //Setters
     
@@ -67,9 +63,6 @@ public class Product {
     public void setPrice(double newPrice){
         priceOfEachUnit = newPrice;
     }
-    public void setActive(boolean newActive){
-        this.active = newActive;
-    }
     
     @Override
  public String toString() {
@@ -78,9 +71,8 @@ public class Product {
             myProduct += "productName = " + productName + "\n";
             myProduct += "unitsInStock = " + unitsInStock + "\n";
             myProduct += "priceOfEachUnit = " + priceOfEachUnit + "\n";
-            myProduct += "Active: " + (isActive() ? "Active" : "Discontinued") + "\n";
-            return myProduct;
-            
+             
+ return myProduct;   
 
  }
 

@@ -5,56 +5,42 @@
 
 /**
  *
- * @author deck
+ * @author 0618506375
  */
 public class Hand {
-    private Card[] cards;
-    private int numCards;
-    
-    public Hand(){
-    cards = new Card[5];
-    numCards = 0;
-    }
-    
-    public void addCard(Card card){
-        if(numCards < 5){
-        cards[numCards] = card;
-        numCards++;
-        
+    private Card[] cards = new Card[5]; // Array to hold up to 5 cards
+    private int numCards = 0; // Counter for the number of cards in the hand
+
+    public void addCard(Card card) {
+        if (numCards < 5) { // Ensure we don't add more than 5 cards
+            cards[numCards] = card;
+            numCards++;
+        } else {
+            System.out.println("Cannot add more cards, hand is full.");
         }
     }
-    
-    public int getTotalPoints(){
-        int total = 0;
-        int numAces = 0;
-     
-        for(int i = 0; i < numCards; i++){
-            total += cards[i].getValue();
-            if(cards[i].getValue() == 11){
-            numAces++;
+
+    public void printHand() {
+        System.out.println("Your hand:");
+        for (int i = 0; i < numCards; i++) {
+            if (cards[i] != null) { // Null check for safety
+                System.out.println(cards[i]); // Assuming Card class has a proper toString method
             }
         }
-        
-        while(total > 21 && numAces > 0){
-            total -= 10;
-            numAces--;
+    }
+
+    public int getPoints() {
+        int totalPoints = 0;
+        for (int i = 0; i < numCards; i++) {
+            if (cards[i] != null) { // Null check for safety
+                totalPoints += cards[i].getPoints(); // Assuming getRank() returns the point value of the card
+            }
         }
-        return total;
-        
+        return totalPoints;
     }
     
-    public boolean isBust(){
-        return getTotalPoints() > 21;
+    public int getNumCards() {
+        return numCards; // Simply returns the number of cards in the hand
     }
-    
-    public void printHand(){
-        System.out.println("Hand:");
-        for(int i = 0; i < numCards; i++){
-            System.out.println(cards[i]);
-        }
-        System.out.println("Total points: " + getTotalPoints());
-    }
- 
-    
     
 }

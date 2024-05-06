@@ -40,25 +40,12 @@ public class ProductTester {
         //Prompt and input for price
         System.out.println("Please enter the price: ");
         tempPrice = in.nextDouble();
-        // Split 
-        in.nextLine();
-        // User Input prompts for p2 (modified versions of p1 prompts)
-        System.out.println("Please enter item number for p2 :");
-        tempNumber = in.nextInt();
+        
 
-        System.out.println("Please enter the product name for p2:");
-        tempName = in.next(); // Consider using in.nextLine() here if needed
-
-        System.out.println("Please enter the quantity for p2:");
-        tempQty = in.nextInt();
-
-        System.out.println("Please enter the price for p2:");
-        tempPrice = in.nextDouble();
-
-
+        
       //Creating product objects using the default constructor
       Product p1 = new Product(tempNumber, tempName, tempQty, tempPrice);
-      Product p2 = new Product(tempNumber, tempName, tempQty, tempPrice);
+      Product p2 = new Product();
       
       Product p3 = new Product(125, "Rice", 5, 30);
       Product p4 = new Product(126, "Sauce", 30, 3);
@@ -67,7 +54,7 @@ public class ProductTester {
       
      
       
-        p6.setActive(false);
+        
    
        
         System.out.println(p1);
@@ -76,8 +63,6 @@ public class ProductTester {
         System.out.println(p4);
         System.out.println(p5);
         System.out.println(p6);
-        
-        in.close();
     }
     
 }
