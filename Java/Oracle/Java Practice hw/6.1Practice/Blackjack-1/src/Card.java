@@ -8,9 +8,8 @@
  * @author 0618506375
  */
 public class Card{
-                String suit,name;
-                int points;
-                
+        String suit,name;
+        int points;
     Card(int n1, int n2){
         suit = getSuit(n1);
         name = getName(n2);
@@ -36,26 +35,29 @@ public class Card{
         return "error";
         
     }
-   
-    private int getPoints() { // Now a private method with no parameters
-        switch (name) {
-            case "Jack":
-            case "Queen":
-            case "King":
-            case "Ten":
-                return 10;
-            case "Ace":
-                return 1; // Adjust for blackjack rules as needed (1 or 11)
-            default:
-                try {
-                    return Integer.parseInt(name); // Converts "Two" to 2, "Three" to 3, etc.
-                } catch (NumberFormatException e) {
-                    return -1; // In case of an error
-                }
-        }
+    public int getPoints(String n){
+        if(n == "Jack" || n == "Queen" || n == "King" || n == "Ten")
+            return 10;
+        if(n == "Two")
+            return 2;
+        if(n == "Three")
+            return 3;
+        if(n == "Four")
+            return 4;
+        if(n == "Five")
+            return 5;
+        if(n == "Six")
+            return 6;
+        if(n == "Seven")
+            return 7;
+        if(n == "Eight")
+            return 8;
+        if(n == "Nine")
+            return 9;
+        if(n == "Ace")
+            return 1;
+        return -1;
     }
-
-    
   public String getSuit(int i){
       if(i == 1) return "Diamonds";
       if(i == 2) return "Clubs";

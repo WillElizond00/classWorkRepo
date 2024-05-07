@@ -3,14 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
-
 /**
  *
  * @author 0618506375
  */
 public class Deck{
-    private Card[] cardArray = new Card[52];
-    private int currentCardIndex = 0;
+    Card[] cardArray = new Card[52];
     Deck(){
         int suits = 4;
         int cardType = 13;
@@ -26,23 +24,8 @@ public class Deck{
            System.out.println(cardArray[i]);
     }  
     
-     public Card dealCard() {
-        if (currentCardIndex < cardArray.length) {
-            return cardArray[currentCardIndex++]; // Return the current card and increment the index
-        } else {
-            return null; // No more cards to deal
-        }
-    }
     
-    public void shuffle(){
     
-        for(int i = cardArray.length - 1; i > 0; i--){
-        int index = (int)(Math.random() * (i + 1));
-        Card temp = cardArray[index];
-        cardArray[index] = cardArray[i];
-        cardArray[i] = temp;
-        }
-    }
     
-   
-}
+    
+}// end of class 
