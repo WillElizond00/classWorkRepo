@@ -7,12 +7,13 @@
  *
  * @author 0618506375
  */
-public class Main {
-    public static void main(String args[]){
-            Deck d = new Deck();
-            d.shuffle();
-            d.print();
+public class Hand {
+    private Card[] cards;
+    private int cardCount;
+    
+    public Hand(){
+    this.cards = new Card[5];
+    this.cardCount = 0;
     }
     
 }
-
