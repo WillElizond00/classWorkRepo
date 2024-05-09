@@ -16,4 +16,16 @@ public class Hand {
     this.cardCount = 0;
     }
     
-}
+    //Method to add a card to the hand
+    public void addCard(Card card){
+        if(cardCount < 5){
+            cards[cardCount] = card;
+            cardCount++;
+        }
+    }
+    
+    public int getTotalPoints(){
+        int totalPoints = 0;
+    }
+    
+}//end of class 
