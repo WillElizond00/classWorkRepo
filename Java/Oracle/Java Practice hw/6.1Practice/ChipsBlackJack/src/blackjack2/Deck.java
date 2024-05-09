@@ -3,49 +3,76 @@ package blackjack2;
 
 
 public class Deck {
-    final int ln = 52;  // Total number of cards
-    private int c = 0;  // Current number of cards in deck
-    private Card[] contents = new Card[ln];  // Array to hold cards
-
-    public Deck(){  // Constructor to populate the deck
+    final int ln = 52;
+    private int c = 0;
+    private Card[] contents = new Card[ln];
+    
+    public Deck(){
+        
         this.Populate();
     }
-
-    public String toString(){  // Displays current state of the deck
-        return "A deck of " + this.ln + " cards with " + this.c + " cards.";
+    
+    public String toString(){
+        String text = "A deck of " + this.ln + " cards with " + this.c+ " cards.";
+        
+        return text;
     }
-
-    private void Populate(){  // Fills the deck with cards
+    
+    private void Populate(){
+        
         for(int i = 0; i < this.ln; i++){
             this.contents[i] = new Card(i);
         }
+        
         this.c = this.ln;
     }
-
-    public void Shuffle(){  // Shuffles the deck
-        for(int i = (this.c - 1); i >= 0; i--){
-            int place = (int) (Math.random() * (i + 1));
-            Card hold = this.contents[place];
+    
+    public void Shuffle(){
+        int i = 0;
+        int place = 0;
+        Card hold;
+        
+        for(i = (this.c - 1); i >= 0; i--){
+            place = (int)Math.floor((Math.random())*(i+1));
+            hold = this.contents[place];
             this.contents[place] = this.contents[i];
             this.contents[i] = hold;
         }
-    }
 
-    public Card deal(){  // Deals the top card from the deck
+    }
+    
+    public Card deal(){
+        Card cd = contents[0];
+        
         if(this.c > 0){
-            Card cd = this.contents[0];
-            System.arraycopy(this.contents, 1, this.contents, 0, --this.c);
-            this.contents[this.c] = null;
-            return cd;
-        }
-        return null;
-    }
+            for(int i = 0; i < (this.c - 1); i++){
+                this.contents[i] = this.contents[i+1];
+            }
+            
+            this.c = this.c - 1;
 
-    public boolean discard(Card n){  // Adds a card back to the deck
-        if(this.c < this.ln && n != null){
-            this.contents[this.c++] = n;
-            return true;
+            this.contents[this.c] = null;
         }
-        return false;
+        
+        return cd;
     }
-}  // end class Deck
+    
+    public boolean discard(Card n){
+        boolean valid = true;
+        
+        if(this.c < 52){
+            if(n != null){
+                this.contents[this.c] = n;
+                this.c = c + 1;
+            }
+        }
+
+        return valid;
+    }
+    
+    /*public void allOut(){
+        for(int i = 0; i < ln; i++){
+            System.out.println(this.contents[i]);
+        }
+    }*/
+}

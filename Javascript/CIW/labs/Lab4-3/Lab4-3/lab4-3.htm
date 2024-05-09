@@ -24,13 +24,21 @@ var c =   prompt("Enter a third number", "2");
 var d =   prompt("Enter a fourth number", "2");
 var e =   prompt("Enter a fifth number", "2");
 
+/*
 var solution = a*b+c+d*e;
 alert(a+""+b+""+c+""+d+""+e);
-
 var firstpart = a*b+c;
 alert("a*b+c =" + firstpart);
 var f = (a*+b+c+d*e);
 alert("f = a*b+c+d*e=" + f);
+*/
+
+var f = (Number(a) * Number(b) + Number(c));
+var solution = (Number(a)*Number(b)+Number(c)) + d*e;
+alert(a + " " + b + " "+ c + " "+ d + " " + e)
+alert("a times b plus c is " + f);
+var dtimese = d*e;
+alert("d times e = " + dtimese);
 
 document.write("The total you are looking for is a*b+c+d*e = " + solution);
 /*Using all 2s for input, the answer should be 10*/
