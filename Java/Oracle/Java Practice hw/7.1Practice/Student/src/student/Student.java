@@ -20,8 +20,32 @@ public class Student {
         this.qualityPoints = qualityPoints;
                
     }
+    
+    Student(String name, double credits, double qualityPoints){
+        this.name = name;
+        this.credits = credits;
+        this.qualityPoints = qualityPoints;
+        
+        if (this.credits > 0){
+        this.gpa = this.qualityPoints / this.credits;
+        }else{
+            this.gpa = 0;
+        }
+    }
     public double getGpa(){
-        return qualityPoints / credits;
+        return gpa;
+    }
+    
+    public void updateAcademicRecord(double newCredits, double newQualityPoints){
+        this.credits += newCredits;
+        this.qualityPoints += newQualityPoints;
+        
+        
+        if(this.credits > 0){
+            this.gpa = this.qualityPoints / this.credits;
+        } else {
+            this.gpa = 0;
+        }
     }
     
     /**
@@ -30,7 +54,9 @@ public class Student {
     public static void main(String[] args) {
         // TODO code application logic here
     
-        
+        Student maryJ = new Student("Mary Jones", 14,46);
+        Student johnS = new Student("John Stiner", 60, 173);
+        Student ariS = new Student("Ari Samala", 31, 69);
         
     }//end of main
     
