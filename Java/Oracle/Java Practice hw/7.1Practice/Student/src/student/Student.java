@@ -58,6 +58,16 @@ public class Student {
         Student johnS = new Student("John Stiner", 60, 173);
         Student ariS = new Student("Ari Samala", 31, 69);
         
+        //Print initial GPAs
+        System.out.println("Ari Samala's initial GPA: " + ariS.getGpa());
+        
+        //Update Ari Samala's academic record 
+        ariS.updateAcademicRecord(13, 52);
+        
+        // Print updated GPA
+         System.out.println("Ari Samala's initial GPA: " + ariS.getGpa());
+         
+         
     }//end of main
     
 }//end of class
