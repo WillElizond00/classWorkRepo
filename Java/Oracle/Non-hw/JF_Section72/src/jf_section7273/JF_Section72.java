@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package jf_section72;
+package jf_section7273;
 
 /**
  *
@@ -31,7 +31,18 @@ public class JF_Section72 {
         int myVar = total(1,2,3,4,5);
         System.out.println(myVar);
      
-     
+      //Call on an instance variable
+       System.out.println(emp2.getLastName());
+      
+      //Call on a Class variable
+      System.out.println(Employee.COMPANY);
+      System.out.println(Employee.compProfile());
+      System.out.println(emp2.toString());
+      
+      
+      Employee.Family fam1 = new Employee.Family();
+      System.out.println();
+        
     }// end of main
     
     
@@ -43,6 +54,6 @@ public class JF_Section72 {
                 sum += nums[i];
             return (sum);
         }
-        
-    
+            
+      
 }// end of class
