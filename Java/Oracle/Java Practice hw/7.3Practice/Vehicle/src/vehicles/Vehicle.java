@@ -42,11 +42,10 @@ public class Vehicle {
         this.model = model;
     }
     
+    
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+  
     
 }
