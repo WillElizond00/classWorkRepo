@@ -78,6 +78,11 @@ public class ProductTester {
         System.out.println(p6);
         
         in.close();
-    }
-    
-}
+    } //end of main
+        public static void displayInventory(Product[] products){
+            for(Product product: products){
+            System.out.println(product);
+            }
+        }
+
+}//end of class
