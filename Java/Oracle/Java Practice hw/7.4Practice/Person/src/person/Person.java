@@ -3,50 +3,43 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package person;
-
+import java.util.Date;
 /**
  *
- * @author deck
+ * @author 0618506375
  */
 public class Person {
-    private String name;
-    private int age;
-    private String address;
+    private String firstName;
+    private String middleName;
+    private String lastName;
+    private Date dateOfBirth;
     
-    //Constructor
-    public Person(String name, int age, String address){
-        this.name = name;
-        this.age = age;
-        this.address = address;
+    public Person(String firstName, String middleName, String lastName, Date dateOfBirth){
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.lastName = lastName;
+        this.dateOfBirth = dateOfBirth;
     }
     
-    //Getter and Setter methods
+    public String getFirstName(){
+        return firstName;
+    }
+    
+    public String getLastName(){
+        return lastName;
+    }
+    
     public String getName(){
-        return name;
+        return firstName + " " + middleName + " " + lastName;
     }
     
-    public void setName(String name){
-        this.name = name;
-    }
-    
-    public int getAge(){
-        return age;
-    }
-    public void setAge(int age){
-        this.age = age;
-    }
-    public String getAddress(){
-        return address;
+    public Date getDateOfBirth(){
+        return dateOfBirth;
     }
     
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        
-        
-        
-    }// End of main
     
-}//End of class
+    
+}//end of class
