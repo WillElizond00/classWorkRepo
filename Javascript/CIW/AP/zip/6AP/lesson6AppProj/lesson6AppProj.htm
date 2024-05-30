@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Lesson 6 Application Project</title>
+
+<script type="text/javascript">
+    function display_image(selectedImage) {
+        // Get the selected image's name and value
+        var selectionName = selectedImage.options[selectedImage.selectedIndex].text;
+        var selection = selectedImage.options[selectedImage.selectedIndex].value;
+
+        // Open a new window
+        var newWindow = window.open("", "ImageWindow", "width=600,height=400");
+
+        // Write the content to the new window
+        newWindow.document.write("<html><head><title>Image Display</title></head>");
+        newWindow.document.write("<body style='background-color: #f0f0f0; color: #333;'>");
+        newWindow.document.write("<div style='text-align: center; margin-top: 50px;'>");
+        newWindow.document.write("<h3>" + selectionName + "</h3>");
+        newWindow.document.write("<img src='" + selection + "' alt='" + selectionName + "' height='150' width='150' />");
+        newWindow.document.write("<form>");
+        newWindow.document.write("<input type='button' value='Close' onclick='window.close();' />");
+        newWindow.document.write("</form>");
+        newWindow.document.write("</div>");
+        newWindow.document.write("</body></html>");
+
+        // Focus on the new window
+        newWindow.focus();
+
+        // Reset the dropdown menu
+        selectedImage.selectedIndex = 0;
+    }
+</script>
+</head>
+<body>
+<h3>CIW JavaScript Specialist</h3>
+<hr />
+<p>Select an image:</p>
+<select name="images" onchange="display_image(this)">
+    <option value="">-- Select an image --</option>
+    <option value="Photos/flower.jpg">CIW On</option>
+    <option value="Photos/MinionSoftwareDev.PNG">CIW Off</option>
+    <option value="Photos/mountains.PNG">CIW1 On</option>
+    <option value="Photos/hunterxhunter4.PNG">CIW1 Off</option>
+</select>
+</body>
+</html>

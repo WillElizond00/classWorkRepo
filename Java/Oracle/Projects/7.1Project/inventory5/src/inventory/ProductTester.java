@@ -84,5 +84,7 @@ public class ProductTester {
             System.out.println(product);
             }
         }
+        
+        
 
 }//end of class
