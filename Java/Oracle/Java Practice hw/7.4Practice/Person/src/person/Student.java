@@ -63,14 +63,40 @@ public class Student extends Person {
         this.major = newMajor;
     }
     
-    public void calculateGpa(double[] grades){
+    //Method to convert letter grade to grade point
+    private double convertGradeToPoint(String grade){
+        switch(grade){
+            case "A":
+                return 4.0;
+            case "A-":
+                return 3.67;
+            case "B+":
+                return 3.33;
+            case "B":
+                return 3.0;
+            case "B-":
+                return 2.67;
+            case "C+":
+                return 2.33;
+            case "C":
+                return 2.0;
+            case "D":
+                return 1.0;
+            case "F":
+                return 0.0;
+            default: 
+                throw new IllegalArgumentException("Invalid grade: " + grade);
+        }
+    }
+    
+  // Method to calculate GPA from an array of letter grades
+    public void calculateGpa(String[] grades) {
         double total = 0.0;
-        for (double grade : grades){
-            total += grade;
+        for (String grade : grades) {
+            total += convertGradeToPoint(grade);
         }
         this.gpa = total / grades.length;
     }
-    
     @Override
     public String toString(){
         return super.getName() + ", Date of Birth: " + super.getDateOfBirth() + 
@@ -79,21 +105,20 @@ public class Student extends Person {
                 ", Graduation Year: " + graduationYear;
      }
     
-    public static void main(String[] args){
-        //Example usage
-        Date dateOfBirth = new Date(102, 7 , 23); // August 23, 2002 (Date uses 1900-based year)
+ public static void main(String[] args) {
+        // Example usage
+        Date dateOfBirth = new Date(102, 7, 23); // August 23, 2002 (Date uses 1900-based year)
         Student student = new Student("John", "A.", "Doe", dateOfBirth, 3.5, "S12345", "Computer Science", "Bachelor's", 2024);
         System.out.println(student);
-        
-        //Change the student's major
+
+        // Change the student's major
         student.changeMajor("Mathematics");
         System.out.println("After changing major: " + student);
-        
-        //Calculate the student's GPA from an array of grades
-        double[] grades = {4.0, 3.7, 3.8, 3.5, 3.9};
+
+        // Calculate the student's GPA from an array of letter grades
+        String[] grades = {"A", "A-", "B+", "B", "A"};
         student.calculateGpa(grades);
         System.out.println("After calculating GPA: " + student);
-        
     }
     
 }
