@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Lab 8-3</title>
+
+<script type="text/javascript">
+<!--
+    
+// write your code here
+// Create iterable function 
+function* integer(){
+
+    var num = 1; 
+    while(true)
+        yield num++
+
+} 
+
+var get = integer();
+console.log(get.next().value)
+for(var i=0; i<5; i++){
+    document.write(get.next().value)
+}
+
+console.log(get.next().value);
+
+//For Each loop
+var num1 = [11,12,13,14];
+for(let x of num1){
+document.write(x + "<br>");
+
+}
+
+//-->
+</script>
+</head>
+<h3>CIW JavaScript Specialist</h3>
+<hr />
+
+</body>
+</html>
