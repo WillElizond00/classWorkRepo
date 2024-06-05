@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title class="title1">Lab 9-3</title>
+</head>
+
+<body>
+<h3 class="head3">CIW JavaScript Specialist</h3>
+ <div class="div1">
+   <p class="p1" id="p1">This is a sample webpage1.</p>
+   <p class="p1" id="p2">This is a sample webpage2.</p>
+   <p class="p1" id="p3">This is a sample webpage3.</p>
+ </div>
+<script>
+  var q = document.getElementsByClassName("p1");
+  for(var i =0; i<q.length; i++){
+    console.log(q[i].innerHTML);
+
+  }
+</script>
+</body>
+</html>
