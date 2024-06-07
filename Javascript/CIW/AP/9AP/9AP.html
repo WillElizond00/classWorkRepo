@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77d42a 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        .main-content {
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
+        }
+        .main-content h2 {
+            text-align: center;
+            margin: 0;
+            padding-bottom: 10px;
+        }
+        .main-content p {
+            line-height: 1.6;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+     <script>
+        function submitQuiz() {
+            let score = 0;
+            const correctAnswers = ['A', 'C', 'B', 'A', 'D'];
+            for (let i = 1; i <= 5; i++) {
+                const options = document.getElementsByName('q' + i);
+                for (let j = 0; j < options.length; j++) {
+                    if (options[j].checked && options[j].value === correctAnswers[i - 1]) {
+                        score++;
+                    }
+                }
+            }
+            localStorage.setItem('quizScore', score);
+            window.location.href = 'result.html';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>About Japan</h1>
+        </div>
+    </header>
+
+    <div class="container main-content">
+        <h2>Overview</h2>
+        <p>Japan is an island country located in East Asia, known for its rich culture, advanced technology, and beautiful landscapes. The country consists of four main islands: Honshu, Hokkaido, Kyushu, and Shikoku, along with numerous smaller islands.</p>
+        
+        <h2>History</h2>
+        <p>Japan has a long and storied history, with its first known habitation dating back to prehistoric times. The country has seen the rise and fall of various dynasties and periods, including the Nara, Heian, Kamakura, Muromachi, Azuchi-Momoyama, and Edo periods. Japan modernized rapidly during the Meiji Restoration in the late 19th century and became a significant world power.</p>
+        
+        <h2>Culture</h2>
+        <p>Japanese culture is renowned for its unique blend of traditional and modern influences. From ancient Shinto shrines and tea ceremonies to contemporary anime and fashion, Japan offers a diverse cultural landscape. The country is also famous for its cuisine, including sushi, ramen, and tempura.</p>
+        
+        <h2>Economy</h2>
+        <p>Japan has one of the largest economies in the world, driven by its highly developed technology sector, automotive industry, and manufacturing capabilities. Major cities like Tokyo, Osaka, and Yokohama are economic hubs that contribute significantly to the global economy.</p>
+        
+        <h2>Tourism</h2>
+        <p>Tourism is a vital part of Japan's economy, attracting millions of visitors each year. Popular destinations include Tokyo, Kyoto, Osaka, and Hiroshima, each offering unique experiences. Visitors can explore historic temples, vibrant cityscapes, and scenic natural landscapes.</p>
+    </div>
+
+    <div class="quiz-container">
+        <h2>Quiz</h2>
+        <div class="quiz-question">
+            <p>1. How many main islands does Japan have?</p>
+            <ul class="quiz-options">
+                <li><input type="radio" name="q1" value="A"> A. Four</li>
+                <li><input type="radio" name="q1" value="B"> B. Five</li>
+                <li><input type="radio" name="q1" value="C"> C. Six</li>
+                <li><input type="radio" name="q1" value="D"> D. Seven</li>
+            </ul>
+        </div>
+        <div class="quiz-question">
+            <p>2. When did Japan modernize rapidly?</p>
+            <ul class="quiz-options">
+                <li><input type="radio" name="q2" value="A"> A. Edo Period</li>
+                <li><input type="radio" name="q2" value="B"> B. Heian Period</li>
+                <li><input type="radio" name="q2" value="C"> C. Meiji Restoration</li>
+                <li><input type="radio" name="q2" value="D"> D. Kamakura Period</li>
+            </ul>
+        </div>
+        <div class="quiz-question">
+            <p>3. What is one of the most famous Japanese cuisines?</p>
+            <ul class="quiz-options">
+                <li><input type="radio" name="q3" value="A"> A. Pizza</li>
+                <li><input type="radio" name="q3" value="B"> B. Sushi</li>
+                <li><input type="radio" name="q3" value="C"> C. Burger</li>
+                <li><input type="radio" name="q3" value="D"> D. Pasta</li>
+            </ul>
+        </div>
+        <div class="quiz-question">
+            <p>4. Which city is a major economic hub in Japan?</p>
+            <ul class="quiz-options">
+                <li><input type="radio" name="q4" value="A"> A. Tokyo</li>
+                <li><input type="radio" name="q4" value="B"> B. Paris</li>
+                <li><input type="radio" name="q4" value="C"> C. New York</li>
+                <li><input type="radio" name="q4" value="D"> D. Beijing</li>
+            </ul>
+        </div>
+        <div class="quiz-question">
+            <p>5. Which period saw the rise and fall of various dynasties in Japan?</p>
+            <ul class="quiz-options">
+                <li><input type="radio" name="q5" value="A"> A. Edo Period</li>
+                <li><input type="radio" name="q5" value="B"> B. Meiji Restoration</li>
+                <li><input type="radio" name="q5" value="C"> C. Kamakura Period</li>
+                <li><input type="radio" name="q5" value="D"> D. Multiple periods</li>
+            </ul>
+        </div>
+        <button onclick="submitQuiz()">Submit Quiz</button>
+    </div>
+</div>
+
+</body>
+</html>

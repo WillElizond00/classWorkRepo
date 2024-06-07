@@ -109,80 +109,69 @@ td, th {
 .button:hover {
     background-color: red; /* Darker blue on hover */
 }
-/* slideshow css start */
 
-#slideShowHeader {
+/* Slideshow start*/
+
+.image-slideshow{
+    max-width: 1000px;
+    position: relative;
     margin: auto;
-    font-size: 60px;
-    font-family: 'Karla', sans-serif;
-    font-weight: lighter;
-
+}
+img{
+    width:100%;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 2s;
+}
+@keyframes fade{
+    from {opacity: .5}
+    to {opacity: 1}
 }
 
-.slider-frame{
-    overflow: hidden;
-      height: 400px;
-      width: 1200px;
-      margin-left: 600px;
-      margin-top: 20px;
+/* Slideshow end*/
+
+/* FAQ Start*/
+.faq-section {
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
 }
 
-@keyframes slide_animation{
-    0% {left:0px;}
-    10% {left:0px;}
-    20% {left:1200px;}
-    30% {left:1200px;}
-    40% {left: 2400px;}
-    50% {left: 2400px;}
-    60% {left: 1200px;}
-    70% {left: 1200px;}
-    80% {left: 0px;}
-    90% {left: 0px;}
-    100% {left:0px;}
+.faq-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-@-webkit-keyframes slide_animation{
-    0% {left:0px;}
-    10% {left:0px;}
-    20% {left:1200px;}
-    30% {left:1200px;}
-    40% {left: 2400px;}
-    50% {left: 2400px;}
-    60% {left: 1200px;}
-    70% {left: 1200px;}
-    80% {left: 0px;}
-    90% {left: 0px;}
-    100% {left:0px;}
+.faq-item {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
 }
 
-.slide-images{
-    width: 3600px;
-    height: 800px;
-    margin: 0 0 0 -2400px;
-    position: relative;
-    -webkit-animation-name: slide_animation;
-    animation-name: slide_animation;
-    -webkit-animation-duration: 33s;
-    animation-duration: 33s;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-direction: alternate;
-    animation-direction: alternate;
-    -webkit-animation-play-state: running;
-    animation-play-state: running;
+.faq-question {
+    cursor: pointer;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px;
+    background-color: #e2e2e2;
+    border-radius: 5px;
 }
 
-.img-container{
-    height: 200px;
-    width: 1200px;
-    position: relative;
-    float: left;
+.faq-answer {
+    display: none;
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #fff;
+    border-radius: 5px;
 }
 
-/* slideshow css end */
 
-
-
+/* FAQ end*/
 
 
 .animeBanner {
